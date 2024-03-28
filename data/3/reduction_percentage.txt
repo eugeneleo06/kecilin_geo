@@ -1,0 +1,5 @@
+File: data.TIF, Method: PACKBITS, Reduction: 1.60%
+File: data.TIF, Method: DEFLATE, Reduction: 33.18%
+File: data.TIF, Method: LZW, Reduction: 22.47%
+File: data.TIF, Method: LZMA, Reduction: 32.68%
+File: data.TIF, Method: ZSTD, Reduction: 35.21%
