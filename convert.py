@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Define the parent folder path
-parent_folder = 'data'
+parent_folder = 'data_band'
 
 methods = ['PACKBITS', 'DEFLATE', 'LZW', 'LZMA', 'ZSTD']
 
@@ -30,7 +30,7 @@ for child_folder in os.listdir(parent_folder):
                         output_file = os.path.join(child_folder_path, "compressed" , f'{file_name[:-4]}_{method}.TIF')
                         
                         # Define the GDAL command
-                        gdal_command = f'gdal_translate -co COMPRESS={method} {tif_file} {output_file}'
+                        gdal_command = f'gdal_translate -co COMPRESS={method} -co ZLEVEL=9 -co NUM_THREADS=ALL_CPUS -co TILED=YES {tif_file} {output_file}'
                         
                         # Run the GDAL command
                         try:
